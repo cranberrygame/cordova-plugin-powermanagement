@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-powermanagement"
+    version="1.0.0">
+	
+    <name>Cordova PowerManagement plugin</name>
+    <description>full wake lock for the app which runs for a long time without user interaction.</description>
+    <author>Sang Ki Kwon (Cranberrygame)</author>		
+    <license>MIT</license>
+    <keywords>cordova,power management</keywords>
+    <repo>https://github.com/cranberrygame/cordova-plugin-powermanagement</repo>
+    <issue>https://github.com/cranberrygame/cordova-plugin-ad-powermanagement/issues</issue> 	
+	<engines>
+	    <engine name="cordova" version=">=3.0.0" />
+	</engines>
+	
+    <js-module src="www/powermanagement.js">
+        <clobbers target="window.powermanagement" />
+    </js-module>
+	
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="PowerManagement">
+				<param name="android-package" value="com.simplec.phonegap.plugins.powermanagement.PowerManagement" />
+			</feature>
+		</config-file>
+
+		<source-file src="src/android/com/simplec/phonegap/plugins/powermanagement/PowerManagement.java" target-dir="src/com/simplec/phonegap/plugins/powermanagement"/>
+	</platform>
+	  
+	<!-- ios -->
+	<platform name="ios">
+
+		<config-file target="config.xml" parent="/*">
+			<feature name="PowerManagement">
+				<param name="ios-package" value="PowerManagement" />
+			</feature>
+		</config-file>
+
+		<header-file src="src/ios/PowerManagement.h" />
+		<source-file src="src/ios/PowerManagement.m" />		
+	</platform>
+
+</plugin>

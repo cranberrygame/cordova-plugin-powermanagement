@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-powermanagement",
+  "version": "1.0.0",
+  "description": "full wake lock for the app which runs for a long time without user interaction.",
+  "cordova": {
+    "id": "cordova-plugin-powermanagement",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cranberrygame/cordova-plugin-powermanagement.git"
+  },
+  "keywords": [
+    "cordova",
+    "power management",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "cranberrygame",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cranberrygame/cordova-plugin-powermanagement/issues"
+  },
+  "homepage": "https://github.com/cranberrygame/cordova-plugin-powermanagement#readme"
+}
