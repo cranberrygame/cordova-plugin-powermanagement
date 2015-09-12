@@ -6,7 +6,7 @@ full wake lock for the app which runs for a long time without user interaction.
 
 prevent or allow device from sleeping.
 
-[android, ios] [cordova cli] [xdk] [cocoon]
+[android, ios] [cordova cli] [xdk] [cocoon] [phonegap build service]
 
 working example: https://play.google.com/store/apps/details?id=com.cranberrygame.mainsubtimer
 
