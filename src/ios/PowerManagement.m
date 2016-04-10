@@ -10,7 +10,6 @@
 
 - (void) acquire:(CDVInvokedUrlCommand*)command {
     CDVPluginResult* result = nil;
-    NSString* jsString = nil;
     
     // Acquire a reference to the local UIApplication singleton
     UIApplication* app = [UIApplication sharedApplication];
@@ -19,20 +18,17 @@
         [app setIdleTimerDisabled:true];
         
         result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-        jsString = [result toSuccessCallbackString:command.callbackId];
     }
     else {
         result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ILLEGAL_ACCESS_EXCEPTION messageAsString:@"IdleTimer already disabled"];
-        jsString = [result toErrorCallbackString:command.callbackId];
     }
     
-    [self writeJavascript:jsString];
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 
 
 - (void) release:(CDVInvokedUrlCommand*)command {
     CDVPluginResult* result = nil;
-    NSString* jsString = nil;
     
     // Acquire a reference to the local UIApplication singleton
     UIApplication* app = [UIApplication sharedApplication];
@@ -41,13 +37,11 @@
         [app setIdleTimerDisabled:false];
         
         result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-        jsString = [result toSuccessCallbackString:command.callbackId];
     }
     else {
         result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ILLEGAL_ACCESS_EXCEPTION messageAsString:@"IdleTimer not disabled"];
-        jsString = [result toErrorCallbackString:command.callbackId];
     }
     
-    [self writeJavascript:jsString];
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 @end
