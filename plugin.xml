@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-powermanagement"
-    version="1.0.3">
+    version="1.0.5">
 	
     <name>Cordova PowerManagement plugin</name>
     <description>full wake lock for the app which runs for a long time without user interaction.</description>

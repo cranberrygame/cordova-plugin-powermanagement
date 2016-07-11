@@ -56,6 +56,8 @@ https://plus.google.com/102658703990850475314/posts/XS5jjEApJYV
 ```javascript
 
 document.addEventListener("deviceready", function(){
+	//You can simply use acquire function in deviceready like following.
+	//window.powermanagement.acquire();
 }, false);
 		
 window.powermanagement.acquire();

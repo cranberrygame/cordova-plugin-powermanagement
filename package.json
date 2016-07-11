@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-powermanagement",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "full wake lock for the app which runs for a long time without user interaction.",
   "cordova": {
     "id": "cordova-plugin-powermanagement",
